@@ -24,7 +24,7 @@ package mvc.model;
  * its area.
  * 
  */
-public class Rectangle {
+public class Rectangle implements Shape {
     private int base;
     private int height;
     
@@ -42,6 +42,7 @@ public class Rectangle {
         this.height = height;
     }
     
+    @Override
     public void setBase(int newBase){
         if (newBase < 0)
             throw new IllegalArgumentException
@@ -56,12 +57,15 @@ public class Rectangle {
         this.height = newHeight;
     }
     
+    @Override
     public int getBase(){  return base;  }
     
     public int getHeight(){  return height;  }
     
+    @Override
     public int area() {  return base * height;  }
     
+    @Override
     public String toString(){
      return String.format("base: %s\nheight:%s\narea:%s\n", base, height, area());
     }

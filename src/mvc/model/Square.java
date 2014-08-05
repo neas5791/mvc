@@ -30,14 +30,14 @@ public class Square extends Rectangle {
         super(newBase, newBase);
     }
     
+    @Override
     public void setBase(int newBase){
         super.setBase(newBase);
         super.setHeight(newBase);
     }
     
+    @Override
     public void setHeight(int newHeight){
         this.setBase(newHeight);
-        //super.setBase(newHeight);
-        //super.setHeight(newHeight);
     }    
 }
